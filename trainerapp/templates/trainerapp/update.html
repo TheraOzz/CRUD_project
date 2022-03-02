@@ -1,0 +1,26 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} update {% endblock %}
+
+{% block content %}
+    <h2> update this trainer! </h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for ="firstName"> first name </label>
+            <input type="text" class="form-control" id="firstName" name="firstName" value={{trainer.firstName}} autofocus>
+            <small class="form-text, text-danger">{{empty_firstName}}</small>
+            <br>
+            <label for ="lastName"> last name </label>
+            <input type="text" class="form-control" id="lastName" name="lastName" value={{trainer.lastName}}>
+            <small class="form-text, text-danger">{{empty_lastName}}</small>
+            <br>
+            <label for ="subject"> subject </label>
+            <input type="text" class="form-control" id="subject" name="subject" value={{trainer.subject}}>
+            <small class="form-text, text-danger">{{empty_subject}}</small>
+            <br><br>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> update </button>
+            <button value="button" class="btn btn-secondary undo"><a href="/trainer/edit/"> undo </a></button>
+        </div>
+    </form>
+{% endblock %}

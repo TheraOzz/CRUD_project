@@ -1,0 +1,22 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} login {% endblock %}
+
+{% block content %}
+    <h2> login user: </h2>
+    <form method="post">
+        {% csrf_token %} 
+        <div class="form-group">
+            <label for="username"> username : </label>
+            <input type="text" class="form-control" name="username" id="username" autofocus/>
+            <small class="form-text text-danger">{{empty_username}}</small>
+            <br/>
+            <label for="password"> password : </label>
+            <input type="password" class="form-control" name="password" id="password" />
+            <small class="form-text text-danger">{{empty_password}}</small>
+            <br/><br/>
+            <button type="submit" class="btn btn-primary"> login </button>
+            <button type="reset" class="btn btn-secondary"> reset </button>
+        </div>
+    </form>
+{% endblock %}

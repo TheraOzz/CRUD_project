@@ -1,0 +1,22 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} read {% endblock %}
+
+{% block content %}
+    <h2> read trainers: </h2>
+    <hr>
+    {% if allTrainers %}
+        <ul>
+            {% for trainer in allTrainers %}
+            <li>
+                <span class="fname">{{trainer.firstName}}</span>
+                <span class="lname">{{trainer.lastName}},</span>
+                <span class="subject">{{trainer.subject}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> no trainers </p>
+    {% endif %}
+
+{% endblock %}

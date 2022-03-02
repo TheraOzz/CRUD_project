@@ -1,0 +1,30 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} edit {% endblock %}
+
+{% block content %}
+    <h2> edit trainers: </h2>
+    <hr>
+    {% if user.moderator.is_moderator %}
+        {% if allTrainers %}
+            <ul>
+                {% for trainer in allTrainers %}
+                <li>
+                    <span class="trainerID">{{trainer.id}}.</span>
+                    <span class="fname">{{trainer.firstName}}</span>
+                    <span class="lname">{{trainer.lastName}},</span>
+                    <span class="subject">{{trainer.subject}}</span>
+                    &nbsp;
+                    <span class="edit_update"><a class="text-primary" href="/trainer/update/{{trainer.id}}"> UPDATE </a></span>
+                    <span class="edit_delete"><a class="text-danger"href="/trainer/delete/{{trainer.id}}"> DELETE </a></span>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p> no trainers </p>
+        {% endif %}
+    {% else %}
+        <h2 class="text-danger">{{no_moderator}}</h2>
+    {% endif %}
+
+{% endblock %}

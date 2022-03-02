@@ -1,0 +1,20 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} home {% endblock %}
+
+{% block content %}
+    <h2> read me </h2>
+    <hr>
+    <h5>for assignment purposes only, you can find some <strong>read me</strong> notes, here in <strong>home page</strong>!</h5>
+    <br>
+    <ul>
+        <li>use navigator (forms - trainers - Create/Read/Edit) or the helping linkbar on the right!</li>
+        <li>try to login/logout/signup with the top-right buttons!</li>
+        <li>in order to <strong>edit</strong> trainers, you need to be a <strong>moderator</strong> .. sign up as moderator or just login if you are one already!</li>
+        <li>home and login/logout/signup paths are all included in the same "trainerapp" application just for this assignment.</li>
+        <li>only home, navigator/linkbar CRE and login/logout/signup buttons are functional in this project.</li>
+    </ul>
+    <h5>thank you,</h5>
+    <h5>{{myName}}</h5>
+    <p></p>
+{% endblock %}

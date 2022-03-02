@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+.container{
+    background-image: url(../images/pattern.png);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* header */
+header{
+    color: whitesmoke;
+    background-color:rgb(100, 150, 225, 0.5);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100px;
+}
+
+.header_logo img{
+    height: 100px;
+}
+
+.header_text{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+}
+
+.header_username{
+    color:yellow;
+    padding-right: 10px;
+}
+
+.login_signup{
+    padding-top: 5px;
+    text-align: right;
+}
+
+/* navigator */
+nav{
+    background-color:rgb(255, 225, 200, 0.5);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    height: 75px;
+}
+
+nav a.active{
+    font-weight: bold;
+    font-size: large;
+}
+
+nav ul{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li{
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    background-color:rgba(207, 175, 143);
+    color:rgb(30, 40, 50);
+    display: block;
+    line-height: 30px;
+    border-radius: 3px;
+    border-bottom: 0.1px solid;
+}
+
+nav ul li:hover>a{             /* for highlighted parent using selector */
+    background-color:rgb(100, 150, 225);
+    color: white;
+    font-weight: bold;
+    position: relative; 
+}
+
+nav ul ul{
+    visibility: hidden;
+    position: absolute;
+    left: -20px;
+    z-index: 10;
+} 
+
+nav ul li:hover ul{ 
+    visibility: visible;
+}
+
+nav ul li:hover ul ul{
+    visibility: hidden;
+}
+
+nav ul ul li:hover ul{
+    visibility: visible;
+}
+
+nav ul ul ul{
+    position: absolute;     /* dimensions from parent */
+    top: 0px;
+    left: 80px;
+}
+
+/* main */
+main{
+    background-color:whitesmoke;
+    height: 525px;
+}
+
+.linkbar{
+    background-color:lightgray;
+}
+
+.linkbar a{
+    color: blue;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+form{
+    padding-left: 50px;
+    width: 55%;
+}
+
+.fname, .lname{
+    padding: 0.5em;
+}
+
+.subject{
+    padding-right: 0.5em;
+    color:gray;
+}
+
+.edit_update a{
+    padding-left: 5px;
+}
+
+/* general css */
+h2{
+    font-family: Georgia;
+    font-size:2em;
+    padding: 20px;
+}
+
+h5{
+    font-family: Georgia;
+    padding: 20px;
+}
+
+li{
+    font-family: Georgia;
+    margin-left: 50px;
+}
+
+a{
+    color:black;
+    padding-right:0.7em;
+    font-family:Verdana;
+    font-size:0.8em;
+}
+
+button{
+    margin-top: 5px;
+    width: 100px;
+    display: block;
+}
+.btn a{
+    display: inline-block;
+}
+
+.undo a{
+    color: white;
+}
+
+p{
+    padding-left: 50px;
+}
+
+i{
+    padding-right: 5px;
+}
+
+/* footer */
+footer{
+    background-color:rgb(255, 225, 200, 0.5);
+    color:midnightblue;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+

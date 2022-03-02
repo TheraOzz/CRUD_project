@@ -1,0 +1,26 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} create {% endblock %}
+
+{% block content %}
+    <h2> create new trainer: </h2>
+    <form method="post">
+        {% csrf_token %} 
+        <div class="form-group">
+            <label for="firstName" class="form-label"> first name : </label>
+            <input type="text" class="form-control" name="firstName" id="firstName" value="" autofocus/>
+            <small class="form-text text-danger">{{empty_firstName}}</small>
+            <br/>
+            <label for="lastName"> last name : </label>
+            <input type="text" class="form-control" name="lastName" id="lastName" />
+            <small class="form-text text-danger">{{empty_lastName}}</small>
+            <br/>
+            <label for="subject"> subject : </label>
+            <input type="text" class="form-control" name="subject" id="subject" />
+            <small class="form-text text-danger">{{empty_subject}}</small>
+            <br/><br/>
+            <button type="submit" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> create </button>
+            <button value="reset" class="btn btn-secondary"> reset </button>
+        </div>
+    </form>
+{% endblock %}

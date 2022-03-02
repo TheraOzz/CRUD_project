@@ -1,0 +1,20 @@
+{% extends "trainerapp/base.html" %}
+
+{% block title %} sign up {% endblock %}
+
+{% block content %}
+    <h2> sign up user: </h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_table }}
+            <br>
+            <label for ="make_moderator"> i am a moderator </label>
+            <input type="checkbox" id="make_moderator" name="make_moderator" value="moderator">
+            <br>
+            <button type="submit" class="btn btn-primary"> sign up </button>
+            <button type="reset" class="btn btn-secondary"> reset </button>
+        </div>
+    </form>
+{% endblock %}

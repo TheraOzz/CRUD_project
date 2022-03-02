@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}private school{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'trainerapp/css/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'trainerapp/images/evolution.png' %}">
+</head>
+
+
+<body class="container my-4">
+
+    <header class="row">
+        <div class="col-md-4 header_logo">
+            <img src="../../static/trainerapp/images/evolution.png" alt="header_logo"/>
+        </div>
+        <div class="col-md-4 header_text">
+            <h1>Private School</h1>
+        </div>
+        <div class="col-md-4 login_signup">
+            {% if user.is_active %}
+                <i class="fa-solid fa-user text-success"><a class="text-warning">  {{ request.user.username }}</a></i>
+                <button value="button" class="btn btn-light"><a href="/logout/"> logout </a></button>
+            {% else %}
+                <button value="button" class="btn btn-warning"><a href="/login/"> login </a></button><br>
+                <button value="button" class="btn btn-warning"><a href="/signup/"> sign up </a></button>
+            {% endif %}
+        </div>
+    </header>
+
+    <nav class="navbar-expand-lg">
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a>forms</a>
+                <ul>
+                    <li><a>courses</a></li>
+                    <li><a>students</a></li>
+                    <li><a>assignments</a></li>
+                    <li><a>trainers</a>
+                        <ul>
+                            <li><a href="/trainer/create/">create</a></li>
+                            <li><a href="/trainer/read/">read</a></li>
+                            <li><a href="/trainer/edit/">edit</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a>about us</a></li>
+            <li><a>contact</a></li>
+        </ul>
+    </nav> 
+
+    <main class="row">
+        <section class="content col-md-10">
+            {% block content %}{% endblock %}
+        </section>
+        <aside class="linkbar col-md-2">
+            {% block linkbar %}
+            <h2> linkbar </h2>
+            <ul class="nav flex-column">
+                <li class="nav-link"><a class="text-decoration-none" href="/trainer/create/">create</a></li>
+                <li class="nav-link"><a class="text-decoration-none" href="/trainer/read/">read</a></li>
+                <li class="nav-link"><a class="text-decoration-none" href="/trainer/edit/">edit</a></li>
+            </ul>
+            {% endblock %}
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2022 by StefanoZZ Programming.</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
