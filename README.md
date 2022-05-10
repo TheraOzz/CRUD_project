@@ -5,10 +5,12 @@ my first CRUD project
 
 
 ## Contents
-- navigator (forms - trainers - Create/Read/Edit) and active linkbar on the right!
+- navigator (forms - trainers - Create/Read/Edit)
+- helping linkbar!
 - login/logout/signup
-- moderator access.. sign up as moderator or just login if you are one already!
+- limited access to Edit.. sign up as moderator if you want to access this mode!
+- forms
 
 ## Notes
-- home and login/logout/signup paths are all included in the same "trainerapp" application just for this assignment.
-- only home, navigator/linkbar CRE and login/logout/signup buttons are functional in this project.
+- only home, navigator/linkbar CRUD and login/logout/signup buttons are functional in this project.
+- home and login/logout/signup paths share the same "trainerapp" application.
