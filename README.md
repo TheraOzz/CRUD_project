@@ -1,5 +1,5 @@
 # PeopleCert_private_school
-my first CRUD project
+my first Django CRUD project
 
 ![private-school](https://user-images.githubusercontent.com/93728701/167644363-d52448e1-af38-4f1a-8aca-39afc442a919.png)
 
